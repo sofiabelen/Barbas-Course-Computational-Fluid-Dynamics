@@ -22,7 +22,7 @@ x, y = np.meshgrid(x, y)
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 
-ax.plot_surface(x, y, z)
+ax.plot_surface(x, y, z, alpha=0.6)
 
 ax.set_xlabel('Distance')
 ax.set_ylabel('Time')
