@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     std::vector<std::vector<double> > u(nx,
             std::vector<double>(nt));
 
-    for (int i = 1; i < nx - 1; i++) {
+    for (int i = 0; i < nx; i++) {
         double xi = static_cast<double>(i) * dx;
 
         if (0.5 <= xi && xi <= 1.0) {
@@ -25,13 +25,11 @@ int main(int argc, char** argv) {
             u[i][0] = 1.0;
         }
     }
-    u[0][0] = 0;
-    u[nx - 1][0] = 0;
 
     for (int t = 0; t < nt - 1; t++) {
         for (int i = 1; i < nx; i++) {
-            u[i][t + 1] = u[i][t] - c * dt / dx *
-                (u[i][t] - u[i - 1][t]);
+            u[i][t + 1] = u[i][t] - c * dt / dx
+                * (u[i][t] - u[i - 1][t]);
         }
     }
 
