@@ -3,16 +3,19 @@ import numpy as np
 from mpl_toolkits import mplot3d
 
 z = np.loadtxt('Data/output1')
+param = np.loadtxt('Parameters/input1')
 
-dt = 0.01
-dx = 0.1
+nx = param[0]
+nt = param[1]
+dt = param[2]
+dx = 2.0 / float(nx)
 
 # x is the position axis
 # y is the time axis
 # z is the value of u
 
-y = np.arange(0, 100) * dt
-x = np.arange(0, 20) * dx
+x = np.arange(0, nx) * dt
+y = np.arange(0, nt) * dx
 
 x, y = np.meshgrid(x, y)
 

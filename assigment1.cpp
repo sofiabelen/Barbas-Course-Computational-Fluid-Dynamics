@@ -4,11 +4,14 @@
 
 int main(int argc, char** argv) {
     std::ofstream output("Data/output1");
+    std::ifstream input("Parameters/input1");
 
-    int nx = 20, nt = 100;
+    int nx, nt;
+    double dt, c;
+
+    input >> nx >> nt >> dt >> c;
+
     double dx = 2.0 / static_cast<double>(nx);
-    double dt = 0.01;
-    double c = 1.0;
 
     std::vector<std::vector<double> > u(nx,
             std::vector<double>(nt));
