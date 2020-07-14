@@ -15,7 +15,7 @@ u = -2 * nu *(phiprime / phi) + 4
 
 ufunc = lambdify((t, x, nu), u)
 
-param = np.loadtxt('Parameters/input3')
+param = np.loadtxt('Parameters/input4')
 
 nx = int(param[0])
 nt = int(param[1])
@@ -56,7 +56,7 @@ ax3d.plot_surface(x2, y2, u, alpha=0.6)
 ax3d.set_xlabel('Distance')
 ax3d.set_ylabel('Time')
 ax3d.set_zlabel(r'$u(i, t)$')
-ax3d.set_title(r'$u(x,t)$')
+ax3d.set_title('Burgers\' Equation')
 ax3d.set_yticks([0, nt / 2 * dt, (nt - 1) * dt])
 
 sns.set(context='notebook', style='darkgrid', palette='Paired')
@@ -68,12 +68,13 @@ ax.plot(x, u[nt - 1], marker='o', lw=2, label='Numerical Solution')
 ax.plot(x, u_analytical[nt - 1], lw=2, label='Analytical Solution')
 ax.set_ylim([0, 10])
 ax.set_xlim([0, 2 * np.pi])
+ax.set_title('Burgers\' Equation')
 ax.legend(loc='best')
 
 ax.set_xlabel('Distance')
 ax.set_ylabel(r'$u(x)$')
 
-fig.savefig('Images/assigment3.svg')
-fig.savefig('Images/assigment3.png')
+fig.savefig('Images/assigment4.svg')
+fig.savefig('Images/assigment4.png')
 
 plt.show()
