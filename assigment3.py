@@ -20,7 +20,7 @@ param = np.loadtxt('Parameters/input3')
 nx = int(param[0])
 nt = int(param[1])
 nu = param[2]
-dx = 2.0 / float(nx)
+dx = 2.0 / float(nx - 1)
 dt = dx * nu
 
 x = np.linspace(0, 2 * np.pi, nx)
@@ -57,6 +57,7 @@ ax3d.set_xlabel('Distance')
 ax3d.set_ylabel('Time')
 ax3d.set_zlabel(r'$u(i, t)$')
 ax3d.set_title(r'$u(x,t)$')
+ax3d.set_yticks([0, nt / 2 * dt, (nt - 1) * dt])
 
 sns.set(context='notebook', style='darkgrid', palette='Paired')
 
