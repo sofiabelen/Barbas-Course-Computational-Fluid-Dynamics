@@ -31,3 +31,10 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 ## Assigment #4: 1D Burgers' Equation
 
 ![Alt text](Images/assigment4.svg?raw=true "4")
+
+## Assigment #5: 2D Linear Convection
+**Discretization scheme:**
+1. Forward difference for the time derivative.
+2. Backward difference for the space derivatives.
+
+![Alt text](Images/assigment5.svg?raw=true "5")
