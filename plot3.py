@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 from mpl_toolkits import mplot3d
+from matplotlib import cm
 
 u = np.loadtxt('Data/output3')
 param = np.loadtxt('Parameters/input3')
@@ -14,10 +15,10 @@ x = np.linspace(0, 2, nx)
 y = np.arange(0, nt) * dt
 x2, y2 = np.meshgrid(x, y)
 
-fig3d = plt.figure()
+fig3d = plt.figure(figsize=(11, 7), dpi=100)
 ax3d = fig3d.gca(projection='3d')
 
-ax3d.plot_surface(x2, y2, u, alpha=0.6)
+ax3d.plot_surface(x2, y2, u, alpha=0.8, cmap=cm.viridis)
 
 ax3d.set_xlabel('Distance')
 ax3d.set_ylabel('Time')
