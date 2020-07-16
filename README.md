@@ -46,3 +46,7 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 ## Assigment #7: 2D Diffusion
 
 ![Alt text](Images/assigment7.svg?raw=true "7")
+
+## Assigment #8: 2D Diffusion
+
+![Alt text](Images/assigment8.svg?raw=true "8")
