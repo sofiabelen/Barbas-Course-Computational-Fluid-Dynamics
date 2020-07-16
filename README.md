@@ -39,6 +39,10 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 
 ![Alt text](Images/assigment5.svg?raw=true "5")
 
-## Assigment #5: 2D Linear Convection
+## Assigment #6: 2D Convection
 
 ![Alt text](Images/assigment6.svg?raw=true "6")
+
+## Assigment #7: 2D Diffusion
+
+![Alt text](Images/assigment7.svg?raw=true "7")
