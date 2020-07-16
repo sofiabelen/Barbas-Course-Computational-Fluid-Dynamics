@@ -23,7 +23,7 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 ## Assigment #3: 1D Diffusion
 **Discretization scheme:**
 1. Forward difference in time.
-2. Central difference in space.
+2. Central difference in space. (Since space is isotropic).
 
 ![Alt text](Images/assigment3.svg?raw=true "4")
 ![Alt text](Images/assigment3-3d.svg?raw=true "4")
@@ -38,3 +38,7 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 2. Backward difference for the space derivatives.
 
 ![Alt text](Images/assigment5.svg?raw=true "5")
+
+## Assigment #5: 2D Linear Convection
+
+![Alt text](Images/assigment6.svg?raw=true "6")
