@@ -3,18 +3,38 @@
 #include <fstream>
 
 int main(int argc, char** argv) {
-    std::ofstream output("Data/output2");
-    std::ifstream input("Parameters/input2");
+    std::ofstream output("Data/output2"), counter_out;
+    std::ifstream input("Parameters/input2"), counter_in;
+    std::fstream log;
+
+    int exp_count;
+    counter_in.open("Parameters/counter");
+    counter_in >> exp_count;
+    counter_in.close();
+
+    counter_out.open("Parameters/counter");
+    counter_out << exp_count + 1;
+    counter_out.close();
 
     int nx, nt;
-    double dt;
+    double dt, dx, sigma, real_time;
 
-    input >> nx >> nt >> dt;
+    input >> dx >> real_time >> sigma;
 
-    double dx = 2.0 / static_cast<double>(nx);
+    dt = dx * sigma;
+    nx = static_cast<int>(2.0 / dx);
+    nt = static_cast<int>(real_time / dt);
+
+    log.open("Data/log", std::ios_base::app);
+    log << "Experiment #" << exp_count << " Step 1\n";
+    log << "dt: " << dt << "\n";
+    log << "dx: " << dx << "\n";
+    log << "nx: " << nx << "\n";
+    log << "time: " << real_time << "\n";
+    log << "sigma: " << sigma << "\n\n";
 
     std::vector<std::vector<double> > u(nx,
-            std::vector<double>(nt));
+            std::vector<double>(nt, 1.0));
 
     for (int i = 1; i < nx - 1; i++) {
         double xi = static_cast<double>(i) * dx;
