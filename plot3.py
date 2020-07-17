@@ -39,7 +39,7 @@ ax3d.set_yticks([0, nt / 2 * dt, (nt - 1) * dt])
 
 sns.set(context='notebook', style='darkgrid', palette='Paired')
 
-for t in np.arange(0, real_time, 0.5):
+for t in np.arange(0, real_time, 0.2):
     fig, ax = plt.subplots()
     
     ax.plot(x, u[0], lw=2, label='Starting Condition')
