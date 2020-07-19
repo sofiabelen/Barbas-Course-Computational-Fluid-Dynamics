@@ -60,3 +60,7 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 ## Assignment #8: 2D Diffusion
 
 ![Alt text](Images/assigment8.svg?raw=true "8")
+
+## Assignment #9: Laplace Equation
+
+![hippo](Images/9-exp54.gif)
