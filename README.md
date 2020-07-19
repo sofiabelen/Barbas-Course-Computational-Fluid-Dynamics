@@ -64,3 +64,7 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 ## Assignment #9: Laplace Equation
 
 ![hippo](Images/9-exp54.gif)
+
+## Assignment #10: Poisson Equation
+
+![hippo](Images/10-exp55.gif)
