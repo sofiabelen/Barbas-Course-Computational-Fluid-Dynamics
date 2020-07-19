@@ -67,4 +67,4 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 
 ## Assignment #10: Poisson Equation
 
-![hippo](Images/10-exp55.gif)
+![hippo](Images/10-exp59.gif)
