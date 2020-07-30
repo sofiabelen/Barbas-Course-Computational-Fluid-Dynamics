@@ -71,4 +71,4 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 
 ## Assignment #11: Cavity-Flow with Navier-Stokes
 
-![Alt text](Images/11-exp119.svg?raw=true "11")
+![Alt text](Images/11-exp121.svg?raw=true "11")

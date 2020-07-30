@@ -18,6 +18,7 @@ nx = int(2.0 / dx)
 ny = int(2.0 / dy)
 nt = int(real_time / dt)
 
+print("exp_count: ", exp_count);
 print("dx: ", dx)
 print("dy: ", dy)
 print("dt: ", dt)
@@ -36,20 +37,19 @@ x = np.linspace(0, 2, nx)
 y = np.linspace(0, 2, ny)
 x, y = np.meshgrid(x, y)
 
-sns.set(context='notebook', style='dark')
+sns.set(context='talk', style='dark')
 
-fig = plt.figure(figsize=(11, 7), dpi=100)
-plt.contourf(x, y, P, alpha=0.5, cmap=cm.viridis)
-plt.colorbar(label='Pressure')
-plt.contour(x, y, P, cmap=cm.viridis)
-plt.quiver(x[::2, ::2], y[::2, ::2], u[::2, ::2], v[::2, ::2],\
+fig, ax = plt.subplots(figsize=(11, 7), dpi=100);
+pos = ax.contourf(x, y, P, alpha=0.5, cmap=cm.viridis)
+fig.colorbar(pos, ax=ax,\
+        label='Pressure')
+ax.contour(x, y, P, cmap=cm.viridis)
+ax.quiver(x[::2, ::2], y[::2, ::2], u[::2, ::2], v[::2, ::2],\
         label='Velocity')
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('Cavity-Flow with Navier-Stokes')
-plt.legend(loc='lower left')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_title('Cavity-Flow with Navier-Stokes')
+ax.legend(loc='lower left')
 
 fig.savefig(f'Images/11-exp{exp_count}.svg')
 fig.savefig(f'Images/11-exp{exp_count}.png')
-
-plt.show()
