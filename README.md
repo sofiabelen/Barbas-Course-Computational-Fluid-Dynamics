@@ -69,6 +69,10 @@ Check out the course: https://www.youtube.com/watch?v=cDy5XGOokBY&list=PL30F4C5A
 
 ![hippo](Images/10-exp59.gif)
 
-## Assignment #11: Cavity-Flow with Navier-Stokes
+## Assignment #11: Cavity Flow with Navier-Stokes
 
 ![Alt text](Images/11-exp121.svg?raw=true "11")
+
+## Assignment #12: Channel Flow with Navier-Stokes
+
+![Alt text](Images/12-exp133.svg?raw=true "12")
