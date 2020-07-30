@@ -37,12 +37,12 @@ x, y = np.meshgrid(x, y)
 sns.set(context='talk', style='dark')
 
 fig, ax = plt.subplots(figsize=(11, 7), dpi=100);
-pos = ax.contourf(x, y, P, alpha=0.5, cmap=cm.viridis)
-fig.colorbar(pos, ax=ax,\
-        label='Pressure')
-ax.contour(x, y, P, cmap=cm.viridis)
+# pos = ax.contourf(x, y, P, alpha=0.5, cmap=cm.viridis)
+# fig.colorbar(pos, ax=ax,\
+#         label='Pressure')
+# ax.contour(x, y, P, cmap=cm.viridis)
 ax.quiver(x[::2, ::2], y[::2, ::2], u[::2, ::2], v[::2, ::2],\
-        label='Velocity')
+        label='Velocity', color='b')
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_title('Channel Flow with Navier-Stokes')
@@ -50,3 +50,5 @@ ax.legend(loc='lower left')
 
 fig.savefig(f'Images/12-exp{exp_count}.svg')
 fig.savefig(f'Images/12-exp{exp_count}.png')
+
+plt.show()
